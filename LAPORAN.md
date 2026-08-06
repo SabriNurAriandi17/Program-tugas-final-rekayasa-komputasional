@@ -211,7 +211,7 @@ Fungsi `make_fitness_function()` mendefinisikan nilai fitness untuk setiap kandi
 
 fitness(w) = F1_macro_mean(inner-CV) − λ × mean((w − 1)²)
 
-Di mana w adalah vektor bobot fitur yang dibatasi pada rentang [0, 1], F1_macro_mean dihitung dari rata-rata F1-score macro pada validasi silang internal (Repeated Stratified K-Fold), dan λ (REG_LAMBDA) adalah koefisien penalti yang mencegah bobot menyimpang terlalu jauh dari nilai netral (1.0).
+Di mana w adalah vektor bobot fitur yang dibatasi pada rentang [0, 1], F1_macro_mean dihitung dari rata-rata F1-score macro pada validasi silang internal (Repeated Stratified K-Fold), dan λ (REG_LAMBDA) adalah koefisien penalti yang mendorong bobot mendekati nilai netral (1.0), yang secara khusus berada tepat pada batas atas rentang [0, 1] tersebut.
 
 #### 4.2.4 Algoritma Particle Swarm Optimization
 
